@@ -21,8 +21,14 @@
     </header>
 
     <main>
-      <h1>My Products</h1>
+      <h1><%= title %></h1>
+      <h1>My Products EJS</h1>
       <p>List of all the products...</p>
+      <% if (products.length > 0) { %> <% for (let product of products) { %>
+      <h1><%= product.title %></h1>
+      <% } %> <% } else { %>
+      <h1>Gak ada Data product</h1>
+      <% } %>
     </main>
   </body>
 </html>
